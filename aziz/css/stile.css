@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0
+    
+}
+body{
+    background-image: url(img2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 155vh;
+
+}
+.words {
+    color: white;
+    font-size: 0;
+    line-height: 1.5;
+  }
+  
+  .words span {
+    font-size: 5rem;
+    display: inline-block;
+    animation: move 3s ease-in-out infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(-30%, 0);
+    }
+    50% {
+      text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+    }
+    100% {
+      transform: translate(30%, 0);
+    }
+  }
+  
+  .words span:nth-child(2) {
+     animation-delay: 0.5s;
+  }
+  
+  .words span:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .words span:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  
+  .words span:nth-child(5) {
+    animation-delay: 2s;
+  }
+  
+  .words span:nth-child(6) {
+    animation-delay: 2.5s;
+  }
+  
+  .words span:nth-child(7) {
+    animation-delay: 3s;
+  }
+  .continer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    iframe {
+        height: 600px; /* تقليل الارتفاع للأجهزة الصغيرة */
+    }
+}
+
+@media (max-width: 480px) {
+    iframe {
+        height: 500px; /* تقليل الارتفاع أكثر للهاتف المحمول */
+    }
+}
+.slider-container {
+    width: 100%;
+    max-width: 800px; /* الحد الأقصى للعرض */
+    margin: 0 auto; /* محاذاة الوسط */
+    position: relative;
+    overflow: hidden; /* إخفاء الصور التي تكون خارج الحاوية */
+}
+
+/* تنسيق الشرائح (الصور) */
+.slider {
+    display: flex;
+    width: 300%; /* عرض كل الشرائح */
+    animation: slideAnimation 5s infinite; /* التحريك التلقائي للصور */
+}
+
+.slide {
+    width: 100%; /* كل صورة تأخذ 100% من العرض */
+    height: 250px; /* الحفاظ على النسب */
+}
+
+/* تعيين الحركة التلقائية للصور */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%;
+    }
+}
